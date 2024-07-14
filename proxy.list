@@ -37,7 +37,6 @@ DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,walletconnect.org
 DOMAIN-SUFFIX,go.dev
-DOMAIN,copilot.microsoft.com
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,civitai.com
 DOMAIN-SUFFIX,uniswap.org
@@ -45,12 +44,6 @@ DOMAIN-SUFFIX,suno.ai
 DOMAIN-SUFFIX,pump.fun
 DOMAIN-SUFFIX,unmineable.com
 DOMAIN-SUFFIX,rapiddns.io
-DOMAIN-SUFFIX,googleapis.cn
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,google.com.tw
-DOMAIN-SUFFIX,google.com
-DOMAIN-SUFFIX,google.com.hk
-DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,dexscreener.com
 DOMAIN-SUFFIX,io.systems
