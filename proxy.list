@@ -48,21 +48,17 @@ DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,dexscreener.com
 DOMAIN-SUFFIX,io.systems
 DOMAIN-SUFFIX,io.net
-DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,github.com
-DOMAIN-SUFFIX,riotgames.com
-DOMAIN-SUFFIX,leagueoflegends.com
 DOMAIN-SUFFIX,adguard.com
 DOMAIN-SUFFIX,flyint.cc
 DOMAIN-SUFFIX,protonmail.com
 DOMAIN-SUFFIX,registry-1.docker.io
+DOMAIN-SUFFIX,trustwallet.com
 DOMAIN-SUFFIX,skiff.com
 DOMAIN-SUFFIX,worldcoin.org
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,metamask.io
-DOMAIN-SUFFIX,github.io
 DOMAIN-SUFFIX,openwrt.org
 DOMAIN-SUFFIX,github.io
 DOMAIN-SUFFIX,notion.so
@@ -92,7 +88,7 @@ DOMAIN-SUFFIX,bard.google.com
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai.com
+DOMAIN-SUFFIX,claude.ai
 # twitch
 DOMAIN-KEYWORD,ttvnw
 DOMAIN-SUFFIX,ext-twitch.tv
