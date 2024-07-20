@@ -28,7 +28,6 @@ IP-CIDR,185.222.222.222/32,no-resolve
 IP-CIDR,208.67.222.222/32,no-resolve
 IP-CIDR,208.67.220.220/32,no-resolve
 # Myrules
-DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,xiaoya.pro
 DOMAIN-SUFFIX,adblockplus.org
 DOMAIN-SUFFIX,sspanel.net
@@ -56,8 +55,6 @@ DOMAIN-SUFFIX,trustwallet.com
 DOMAIN-SUFFIX,skiff.com
 DOMAIN-SUFFIX,worldcoin.org
 DOMAIN-SUFFIX,githubusercontent.com
-DOMAIN-SUFFIX,bing.com
-DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,metamask.io
 DOMAIN-SUFFIX,openwrt.org
 DOMAIN-SUFFIX,github.io
@@ -69,8 +66,6 @@ DOMAIN-SUFFIX,arc.net
 DOMAIN-SUFFIX,x.com
 # AI
 DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,events.statsigapi.net
@@ -78,10 +73,6 @@ DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,identrust.com
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,bard.google.com
