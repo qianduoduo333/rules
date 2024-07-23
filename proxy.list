@@ -77,6 +77,7 @@ DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,groq.com
 # twitch
 DOMAIN-KEYWORD,ttvnw
 DOMAIN-SUFFIX,ext-twitch.tv
