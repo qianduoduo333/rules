@@ -66,6 +66,7 @@ DOMAIN-SUFFIX,arc.net
 DOMAIN-SUFFIX,x.com
 # AI
 DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,leonardo.ai
 DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,events.statsigapi.net
