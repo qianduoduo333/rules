@@ -28,7 +28,6 @@
     "rules": [
       { "outbound": "any", "server": "localDns", "disable_cache": true },
       { "rule_set": "geosite-cn", "server": "localDns" },
-      { "rule_set": "anti-ad", "server": "block" },   
       { "clash_mode": "direct", "server": "localDns" },
       { "clash_mode": "global", "server": "proxyDns" },
       { "rule_set": "geosite-geolocation-!cn", "server": "proxyDns" }
@@ -144,7 +143,6 @@
       { "tag": "geosite-game-steam", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-game-epic", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/epicgames.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-geolocation-!cn", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连" },
-      { "tag": "anti-ad", "type": "remote", "format": "binary", "url": "https://anti-ad.net/anti-ad-sing-box.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-myproxy", "type": "remote", "format": "source", "url": "https://ghp.ci/https://raw.githubusercontent.com/qianduoduo333/rules/refs/heads/main/proxy.json", "download_detour": "🎯 全球直连" }
     ],
     "geosite": {"path": "./geosite.db", "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.db"},
