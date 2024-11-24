@@ -21,35 +21,82 @@
   
   "dns": {
     "servers": [
-      { "tag": "proxyDns", "address": "223.5.5.5", "detour": "🎯 全球直连" },
-      { "tag": "localDns", "address": "223.5.5.5", "detour": "🎯 全球直连" },
-      { "tag": "block", "address": "rcode://success" }
+      {
+        "tag": "default-dns",
+        "address": "223.5.5.5",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "system-dns",
+        "address": "local",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "block-dns",
+        "address": "rcode://name_error"
+      },
+      {
+        "tag": "google",
+        "address": "https://dns.google/dns-query",
+        "address_resolver": "default-dns",
+        "address_strategy": "ipv4_only",
+        "strategy": "ipv4_only",
+        "client_subnet": "1.0.1.0"
+      }
     ],
     "rules": [
-      { "outbound": "any", "server": "localDns", "disable_cache": true },
-      { "rule_set": "geosite-cn", "server": "localDns" },
-      { "clash_mode": "direct", "server": "localDns" },
-      { "clash_mode": "global", "server": "proxyDns" },
-      { "rule_set": "geosite-geolocation-!cn", "server": "proxyDns" }
+     {
+        "outbound": "any",
+        "server": "default-dns"
+      },
+      {
+        "rule_set": "anti-ad",
+        "server": "block-dns"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "default-dns"
+      },
+      {
+        "clash_mode": "global",
+        "server": "google"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "server": "default-dns"
+      }
     ],
-    "final": "localDns",
-    "strategy": "ipv4_only"
+    "strategy": "ipv4_only",
+    "disable_cache": false,
+    "disable_expire": false,
+    "independent_cache": false,
+    "final": "google"
   },
 
     "inbounds": [
+  {
+      "type": "tun",
+      "address": "172.19.0.1/30",
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": true,
+      "endpoint_independent_nat": false,
+      "stack": "system",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
+      }
+    },
     {
-  "type": "tproxy",
-  "tag": "tproxy-in",
-  "listen": "::",
-  "listen_port": 12345,
-  "tcp_fast_open": true,
-  "tcp_multi_path": false,
-  "udp_fragment": true,
-  "udp_timeout": "5m",
-  "sniff": true,
-  "sniff_override_destination": false,
-  "sniff_timeout": "300ms",
-  "domain_strategy": "prefer_ipv4"
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 2080,
+      "sniff": true,
+      "users": []
     }
   ],
 
@@ -132,6 +179,7 @@
       { "tag": "geosite-game-steam", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-game-epic", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/epicgames.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-geolocation-!cn", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连" },
+      { "tag": "anti-ad", "type": "remote", "format": "binary", "url": "https://anti-ad.net/anti-ad-sing-box.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-myproxy", "type": "remote", "format": "source", "url": "https://ghp.ci/https://raw.githubusercontent.com/qianduoduo333/rules/refs/heads/main/proxy.json", "download_detour": "🎯 全球直连" }
     ],
     "geosite": {"path": "./geosite.db", "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.db"},
