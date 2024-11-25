@@ -168,6 +168,7 @@
       { "tag": "geosite-game-riot", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/riot.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-game-steam", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-game-epic", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/epicgames.srs", "download_detour": "🎯 全球直连" },
+      { "tag": "anti-ad", "type": "remote", "format": "binary", "url": "https://anti-ad.net/anti-ad-sing-box.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-geolocation-!cn", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-myproxy", "type": "remote", "format": "source", "url": "https://ghp.ci/https://raw.githubusercontent.com/qianduoduo333/rules/refs/heads/main/proxy.json", "download_detour": "🎯 全球直连" }
     ],
