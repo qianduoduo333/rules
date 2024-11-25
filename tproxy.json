@@ -24,22 +24,22 @@
             {
                 "tag": "tencentDNS",
                 "address": "tls://120.53.53.53",
-                "detour": "DIRECT"
+                "detour": "🎯 全球直连"
             },
             {
                 "tag": "aliDNS",
                 "address": "https://223.5.5.5/dns-query",
-                "detour": "DIRECT"
+                "detour": "🎯 全球直连"
             },
             {
                 "tag": "cloudflareDNS",
                 "address": "https://1.1.1.1/dns-query",
-                "detour": "PROXY"
+                "detour": "🚀 节点选择"
             },
             {
                 "tag": "localDNS",
                 "address": "192.168.1.1",
-                "detour": "DIRECT"
+                "detour": "🎯 全球直连"
             },
             {
                 "tag": "refusedDNS",
