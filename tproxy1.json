@@ -44,10 +44,6 @@
             {
                 "tag": "refusedDNS",
                 "address": "rcode://success"
-            },
-            {
-                "tag": "fakeipDNS",
-                "address": "fakeip"
             }
         ],
      "rules": [
@@ -86,7 +82,7 @@
                     "geosite-google",
                     "geosite-github",
                     "geosite-telegram",
-                    "geosite-oai",
+                    "geosite-ai",
                   "geosite-X",
                     "geosite-bing",
                     "geosite-youtube",
@@ -95,17 +91,8 @@
                   "geosite-netflix",
                   "geosite-crypto"
                 ],
-                "server": "fakeipDNS",
+                "server": "cloudflareDNS",
                 "rewrite_ttl": 10
-            },
-            {
-                "query_type": [
-                    "A",
-                    "CNAME",
-                    "SVCB",
-                    "HTTPS"
-                ],
-                "server": "cloudflareDNS"
             }
         ],
     "final": "aliDNS",
@@ -113,11 +100,7 @@
         "disable_cache": false,
         "disable_expire": false,
         "independent_cache": true,
-        "reverse_mapping": false,
-        "fakeip": {
-            "enabled": true,
-            "inet4_range": "198.18.0.0/15"
-        }
+        "reverse_mapping": false
   },
 
     "inbounds": [
