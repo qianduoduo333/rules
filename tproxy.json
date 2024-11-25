@@ -21,56 +21,103 @@
   
   "dns": {
    "servers": [
-      {
-        "tag": "default-dns",
-        "address": "223.5.5.5",
-        "detour": "🎯 全球直连"
-      },
-      {
-        "tag": "system-dns",
-        "address": "local",
-        "detour": "🎯 全球直连"
-      },
-      {
-        "tag": "block-dns",
-        "address": "rcode://name_error"
-      },
-      {
-        "tag": "google",
-        "address": "https://dns.google/dns-query",
-        "address_resolver": "default-dns",
-        "address_strategy": "ipv4_only",
-        "strategy": "ipv4_only",
-        "client_subnet": "1.0.1.0"
-      }
-    ],
+            {
+                "tag": "tencentDNS",
+                "address": "tls://120.53.53.53",
+                "detour": "DIRECT"
+            },
+            {
+                "tag": "aliDNS",
+                "address": "https://223.5.5.5/dns-query",
+                "detour": "DIRECT"
+            },
+            {
+                "tag": "cloudflareDNS",
+                "address": "https://1.1.1.1/dns-query",
+                "detour": "PROXY"
+            },
+            {
+                "tag": "localDNS",
+                "address": "192.168.1.1",
+                "detour": "DIRECT"
+            },
+            {
+                "tag": "refusedDNS",
+                "address": "rcode://success"
+            },
+            {
+                "tag": "fakeipDNS",
+                "address": "fakeip"
+            }
+        ],
      "rules": [
-     {
-        "outbound": "any",
-        "server": "default-dns"
-      },
-      {
-        "rule_set": "anti-ad",
-        "server": "block-dns"
-      },
-      {
-        "clash_mode": "direct",
-        "server": "default-dns"
-      },
-      {
-        "clash_mode": "global",
-        "server": "google"
-      },
-      {
-        "rule_set": "geosite-cn",
-        "server": "default-dns"
-      }
-    ],
-    "strategy": "ipv4_only",
-    "disable_cache": false,
-    "disable_expire": false,
-    "independent_cache": false,
-    "final": "google"
+            {
+                "outbound": "any",
+                "server": "aliDNS"
+            },
+            {
+                "query_type": [
+                    "AAAA",
+                ],
+                "server": "refusedDNS",
+                "disable_cache": true
+            },
+            {
+                "invert": true,
+                "protocol": "dns",
+                "server": "refusedDNS",
+                "disable_cache": true
+            },
+            {
+                "rule_set": "anti-ad",
+                "server": "refusedDNS",
+                "disable_cache": true
+            },
+            {
+                "rule_set": [
+                    "geosite-cn",
+                    "geosite-apple"
+                ],
+                "server": "tencentDNS"
+            },
+            {
+                "query_type": "A",
+                "rule_set": [
+                    "geosite-google",
+                    "geosite-github",
+                    "geosite-telegram",
+                    "geosite-oai",
+                  "geosite-X",
+                    "geosite-bing",
+                    "geosite-youtube",
+                    "geosite-geolocation-!cn",
+                     "geosite-tiktok",
+                  "geosite-netflix",
+                  "geosite-crypto"
+                ],
+                "server": "fakeipDNS",
+                "rewrite_ttl": 10
+            },
+            {
+                "query_type": [
+                    "A",
+                    "CNAME",
+                    "SVCB",
+                    "HTTPS"
+                ],
+                "server": "cloudflareDNS"
+            }
+        ],
+    "final": "aliDNS",
+        "strategy": "ipv4_only",
+        "disable_cache": false,
+        "disable_expire": false,
+        "independent_cache": true,
+        "reverse_mapping": false,
+        "fakeip": {
+            "enabled": true,
+            "inet4_range": "198.18.0.0/15"
+        }
   },
 
     "inbounds": [
