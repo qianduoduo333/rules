@@ -141,6 +141,7 @@
       { "domain": ["doh.dns.sb"], "outbound": "🚀 节点选择" },
       { "ip_cidr": ["1.1.1.1/32","45.11.45.11/32","185.222.222.222/32"], "outbound": "🚀 节点选择" },
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
+      { "rule_set": "geosite-microsoft", "outbound": "🪟 Microsoft" },
       { "rule_set": ["geosite-ai","geoip-ai","geosite-bing"], "outbound": "🤖 AI" },
       { "rule_set": ["geosite-X","geoip-X"], "outbound": "🐦 Twitter" },
       { "rule_set": "geosite-github", "outbound": "👨🏿‍💻 GitHub" },
@@ -153,7 +154,6 @@
       { "rule_set": ["geosite-game-ps5", "geosite-game-steam","geosite-game-riot","geosite-game-epic"], "outbound": "🎮 游戏平台" },
       { "rule_set": "geosite-crypto", "outbound": "🪙 数字货币" },
       { "rule_set": ["geosite-geolocation-!cn","geosite-myproxy"], "outbound": "🚀 节点选择" },
-      { "rule_set": "geosite-microsoft", "outbound": "🪟 Microsoft" },
       { "rule_set": ["geoip-cn", "geosite-cn"], "outbound": "🎯 全球直连" }
     ],
     
