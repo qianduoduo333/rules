@@ -23,7 +23,7 @@
     "servers": [
       {
         "tag": "default-dns",
-        "address": "223.5.5.5",
+        "address": "tls://223.5.5.5",
         "detour": "🎯 全球直连"
       },
       {
