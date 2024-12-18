@@ -142,7 +142,7 @@
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
       { "domain": ["doh.dns.sb"], "outbound": "🚀 节点选择" },
       { "domain": ["adobeccstatic.com","adobe.com","adobe.io"], "outbound": "block" },
-      { "domain": ["cf.bili.rip","misakaf.org"], "outbound": "🇭🇰 Boslife" },
+      { "domain": ["cf.bili.rip","emby3.misakaf.org"], "outbound": "🇭🇰 Boslife" },
       { "domain": ["302.ai"], "outbound": "🚀 节点选择" },
       { "ip_cidr": ["1.1.1.1/32","45.11.45.11/32","185.222.222.222/32"], "outbound": "🚀 节点选择" },
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
