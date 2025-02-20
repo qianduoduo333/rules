@@ -71,9 +71,11 @@
         "helius.dev",
         "quicknode.com",
         "alchemy.com",
-        "solscan.io"
+        "solscan.io",
+        "grok.com",
+        "x.ai"
       ],"domain_keyword":[
-        "worldcoin","polymarket"
+        "worldcoin","polymarket","helius","quicknode","alchemy"
       ]
     }
 
