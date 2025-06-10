@@ -148,7 +148,7 @@
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
       { "rule_set": "geosite-github", "outbound": "👨🏿‍💻 GitHub" },
       { "rule_set": ["geosite-ai","geoip-ai","geosite-bing"], "outbound": "🤖 AI" },
-      { "domain": ["apple-relay.cloudflare.com","apple-relay.apple.com"], "outbound": "🤖 AI" },
+      { "domain_suffix": ["apple-relay.cloudflare.com","apple-relay.apple.com"], "outbound": "🤖 AI" },
       { "rule_set": ["geosite-microsoft","geosite-onedrive"], "outbound": "🪟 Microsoft" },
       { "rule_set": ["geosite-X","geoip-X"], "outbound": "🐦 Twitter" },
       { "rule_set": "geosite-youtube", "outbound": "📹 YouTube" },
