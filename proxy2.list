@@ -11,7 +11,9 @@ rules:
   - DOMAIN-SUFFIX,civitai.com
   - DOMAIN-SUFFIX,uniswap.org
   - DOMAIN-SUFFIX,suno.ai
-  - DOMAIN-SUFFIX,pump.fun
+  - DOMAIN-SUFFIX,uniswap.org
+  - DOMAIN-SUFFIX,mainnet.zklighter.elliot.ai
+  - DOMAIN-SUFFIX,lighter.xyz
   - DOMAIN-SUFFIX,unmineable.com
   - DOMAIN-SUFFIX,rapiddns.io
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
